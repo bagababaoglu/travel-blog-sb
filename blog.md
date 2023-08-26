@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Blog
-permalink: /blog/
+feed-type: blog
+permalink: /feed/blog
 ---
 

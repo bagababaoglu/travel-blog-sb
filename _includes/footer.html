@@ -12,14 +12,17 @@
             </svg><span>Subscribe</span>
           </a>
         </p>
-      {%- if site.author %}
+      {%- if site.data.authors %}
         <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
+        {% for author_hash in site.data.authors %}
+          {% assign author = author_hash[1] %}
+          {% if author.display_name -%}
+            <li class="p-name">{{ author.display_name | escape }}</li>
           {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {% if author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ author.email }}</a></li>
           {%- endif %}
+        {% endfor %}
         </ul>
       {%- endif %}
       </div>

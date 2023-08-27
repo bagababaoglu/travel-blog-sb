@@ -9,5 +9,12 @@ layout: base
 
   {{ content }}
 
+  {%- assign feedTypes = "blog,tips,relationship" | split: ',' -%}
+  {%- assign displayOffset = 0 -%}
+  {%- assign displayLimit = 1 -%}
+  {%- assign sectionName = "featured-post" -%}
+  {%- for feedType in feedTypes -%}
+    {% include posts.html %}
+  {%- endfor -%}
 
 </div>

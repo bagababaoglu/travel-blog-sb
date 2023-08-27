@@ -49,6 +49,7 @@ header_pages:
    - tips.md
    - relationship.md
    - about.md
+   - support.md
    - contact.md
 
 # Set to `true` to show excerpts on the homepage.

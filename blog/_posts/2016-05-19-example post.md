@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "This post demonstrates post content styles"
-categories: blog
+title: "Example post"
 author:
 - bagababaoglu
 - salomewalz

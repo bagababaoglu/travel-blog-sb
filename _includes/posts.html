@@ -7,7 +7,7 @@
             {%- if postImage -%}
                 <img src="{{postImage}}" alt="" class="featured-image">
             {%- else -%}
-                {%- assign postImage = "/assets/images/blog/featured/default.jpg" | relative_url -%}
+                {%- assign postImage = "/assets/images/" | append: feedType  | append: "/featured/default.jpg"  | relative_url -%}
                 <img src="{{postImage}}" alt="" class="featured-image">
             {%- endif -%}
         </div>

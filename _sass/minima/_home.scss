@@ -2,7 +2,7 @@
 .home-featured-posts {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: 2fr 3fr;
   row-gap: 5px;
   column-gap: 5px;
 
@@ -10,7 +10,7 @@
     display: grid;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px;
+    grid-template-rows: 175px;
     column-gap: 10px;
     margin-top: 10px;
     border-top: lightgray;

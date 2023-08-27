@@ -12,9 +12,16 @@ layout: base
   {%- assign feedTypes = "blog,tips,relationship" | split: ',' -%}
   {%- assign displayOffset = 0 -%}
   {%- assign displayLimit = 1 -%}
-  {%- assign sectionName = "featured-post" -%}
-  {%- for feedType in feedTypes -%}
-    {% include posts.html %}
-  {%- endfor -%}
+  <div class="home-featured-posts">
+    {%- for feedType in feedTypes -%}
+      {%- if feedType == "blog" -%}
+        {%- assign sectionName = "home-main-featured-post" -%}
+      {%- else -%}
+        {%- assign sectionName = "home-sub-featured-post" -%}
+      {%- endif -%}
+      {% include posts.html %}
+    {%- endfor -%}
+  </div>
+
 
 </div>
